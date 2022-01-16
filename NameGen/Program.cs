@@ -7,11 +7,12 @@ namespace NameGen
     {
         public static void Main(string[] args)
         {
-            string[] a = {"Sed", "Gart", "Akin" };
-            string[] b = {"aze", "ecr", "yrd" };   
+            ForData Fd = new();
+            Parse Pr = new();
+            Pr.JsLoad(Fd);
             GenMix GM = new();
-            Console.WriteLine(GM.Mix2(a, b));
-            Console.WriteLine(GM.RndPart(a));
+            Console.WriteLine(GM.Mix2(Fd.villagePart1, Fd.villagePart2));
+            Console.WriteLine(GM.RndPart(Fd.villagePart1));
             Console.ReadLine();
         }
     }
