@@ -7,7 +7,6 @@
 
         private string[] a;
         private string[] b;
-        Random r = new Random();
         public GenMix(string[] a, string[] b)
         {
             this.a = a;
@@ -15,6 +14,7 @@
         }
         private string RndPart(string[] name)
         {
+            Random r = new Random();
             int i = r.Next(name.Length);
             return name[i];
         }
